@@ -101,7 +101,6 @@ export default {
         this.$router.push({ name: 'editTask', query:{inst:instance}})
       },
       del(instance) {
-        console.log(instance)
         axios.delete(`http://localhost:5000/api/tasks/${instance.id}`)
           .then(()=>{
             this.searchTask();
